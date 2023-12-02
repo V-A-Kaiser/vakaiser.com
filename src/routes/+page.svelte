@@ -41,13 +41,16 @@
     };
 
     firstName.animate(
-      [{ offset: 0, transform: 'translateX(-3rem)' }, { offset: 1, transform: 'translateX(0rem) skewX(-15deg)' }],
+      [
+        { offset: 0, transform: 'translateX(-3rem)' },
+        { offset: 1, transform: 'translateX(0rem) skewX(-15deg)' }
+      ],
       snsOptions
     );
     lastName.animate(
       [
-        { offset: 0, transform: 'translateX(3rem)'},
-        { offset: 0.7, color: 'white', backgroundColor: 'black' },
+        { offset: 0, transform: 'translateX(3rem)' },
+        { offset: 0.7, color: 'white', backgroundColor: 'transparent' },
         { offset: 0.7, color: 'black', backgroundColor: 'white' },
         {
           offset: 1,
@@ -66,13 +69,11 @@
   class="flex flex-col items-center justify-center h-screen overflow-hidden text-white bg-black"
 >
   <!-- Title Animation-->
-  <div
-    class="flex items-center justify-center mx-4 bg-black"
-  >
+  <div class="flex items-center justify-center">
     <h1
       class="text-5xl tracking-[.5rem] font-thin font-title select-none flex justify-between items-stretch"
     >
-      <div bind:this={firstName} class="p-2">
+      <div bind:this={firstName} class="p-2 rounded-l-lg">
         {#each 'VALERIE' as letter}
           <span>{letter}</span>
         {/each}
