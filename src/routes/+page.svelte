@@ -33,7 +33,7 @@
 
     // Animate Shift & Skew
     let snsOptions: KeyframeAnimationOptions = {
-      delay: 1000,
+      delay: 1250,
       duration: 1000,
       iterations: 1,
       fill: 'both',
@@ -41,16 +41,20 @@
     };
 
     firstName.animate(
-      [{ offset: 0 }, { offset: 1, transform: 'translateX(0.5rem) skewX(-15deg)' }],
+      [{ offset: 0, transform: 'translateX(-3rem)' }, { offset: 1, transform: 'translateX(0rem) skewX(-15deg)' }],
       snsOptions
     );
     lastName.animate(
       [
-        { offset: 0 },
+        { offset: 0, transform: 'translateX(3rem)'},
+        { offset: 0.7, color: 'white', backgroundColor: 'black' },
+        { offset: 0.7, color: 'black', backgroundColor: 'white' },
         {
           offset: 1,
-          transform: 'translateX(-0.5rem) skewX(-15deg)',
-          fontWeight: '600'
+          transform: 'translateX(0) skewX(-15deg)',
+          fontWeight: '900',
+          color: 'black',
+          backgroundColor: 'white'
         }
       ],
       snsOptions
@@ -62,16 +66,18 @@
   class="flex flex-col items-center justify-center h-screen overflow-hidden text-white bg-black"
 >
   <!-- Title Animation-->
-  <div class="flex items-center justify-center p-4 mx-4 bg-black border border-white rounded-lg">
+  <div
+    class="flex items-center justify-center mx-4 bg-black"
+  >
     <h1
-      class="text-5xl tracking-[.5rem] font-thin font-title select-none flex justify-between items-center gap-8"
+      class="text-5xl tracking-[.5rem] font-thin font-title select-none flex justify-between items-stretch"
     >
-      <div bind:this={firstName}>
+      <div bind:this={firstName} class="p-2">
         {#each 'VALERIE' as letter}
           <span>{letter}</span>
         {/each}
       </div>
-      <div bind:this={lastName}>
+      <div bind:this={lastName} class="p-2 rounded-r-lg">
         {#each 'KAISER' as letter}
           <span>{letter}</span>
         {/each}
