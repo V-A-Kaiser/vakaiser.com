@@ -27,7 +27,7 @@
     circles.animate([{ offset: 0 }, { offset: 1, rotate: '360deg' }], {
       duration: 60000,
       iterations: Infinity,
-      direction: 'normal',
+      direction: 'normal'
     });
 
     // Individual Circles
@@ -57,6 +57,6 @@
 
 <div bind:this={circles} class="absolute">
   {#each colors as color}
-    <span class="w-64 h-64 {color} border opacity-90 block absolute" />
+    <span class="w-64 h-64 {color} border block absolute" />
   {/each}
 </div>
