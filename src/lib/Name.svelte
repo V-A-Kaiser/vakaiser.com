@@ -73,7 +73,7 @@
 
 <div class="flex items-center justify-center bg-black w-32 z-10">
   <h1
-    class="text-5xl tracking-[.5rem] font-thin font-title select-none flex justify-between items-stretch"
+    class="text-xl sm:text-5xl tracking-[.5rem] font-thin font-title select-none flex justify-between items-stretch"
   >
     <div bind:this={firstName} class="p-2 pl-4 rounded-l-lg opacity-0">
       {#each 'VALERIE' as letter}
