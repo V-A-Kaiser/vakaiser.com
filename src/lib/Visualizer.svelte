@@ -48,7 +48,7 @@
           }
         ],
         {
-          delay: 500,
+          delay: 800,
           duration: 4000,
           iterations: 1,
           direction: 'alternate',
@@ -76,7 +76,7 @@
           }
         ],
         {
-          delay: 250,
+          delay: 500,
           duration: 4000,
           iterations: 1,
           direction: 'alternate',
