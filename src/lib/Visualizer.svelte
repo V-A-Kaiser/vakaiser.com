@@ -43,10 +43,11 @@
           }
         ],
         {
+          delay: 1750,
           duration: 4000,
           iterations: 1,
           direction: 'alternate',
-          easing: 'cubic-bezier(.8,0,.2,1)',
+          easing: 'cubic-bezier(0.75,0,0,1)',
           fill: 'both'
         }
       );
