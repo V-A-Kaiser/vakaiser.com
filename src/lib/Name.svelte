@@ -57,7 +57,7 @@
         {
           offset: 1,
           transform: 'translateX(0) skewX(-15deg)',
-          fontWeight: '900',
+          fontWeight: '700',
           color: 'black',
           backgroundColor: 'white'
         }
@@ -71,7 +71,7 @@
   <h1
     class="text-5xl tracking-[.5rem] font-thin font-title select-none flex justify-between items-stretch"
   >
-    <div bind:this={firstName} class="p-2 rounded-l-lg">
+    <div bind:this={firstName} class="p-2 pl-4 rounded-l-lg">
       {#each 'VALERIE' as letter}
         <span>{letter}</span>
       {/each}
