@@ -43,7 +43,7 @@
           }
         ],
         {
-          delay: 1750,
+          delay: 1500,
           duration: 4000,
           iterations: 1,
           direction: 'alternate',
