@@ -1,8 +1,8 @@
 <script lang="ts">
   import { onMount } from 'svelte';
 
-  let circles: HTMLDivElement;
-  let innerCircles: HTMLDivElement;
+  let circles: HTMLDivElement, innerCircles: HTMLDivElement, outerCircles: HTMLDivElement;
+
   let colors = [
     'border-red-500',
     'border-orange-500',
@@ -25,17 +25,91 @@
 
   onMount(() => {
     // Reset opacity onMount to prevent flicker.
+    outerCircles.style.setProperty('opacity', '1');
     circles.style.setProperty('opacity', '1');
     innerCircles.style.setProperty('opacity', '1');
 
-    // Circle Group
-    circles.animate([{ offset: 0 }, { offset: 1, rotate: '360deg' }], {
-      duration: 60000,
+    // Circle Groups
+    outerCircles.animate([{ offset: 0 }, { offset: 1, rotate: '360deg' }], {
+      duration: 120000,
       iterations: Infinity,
       direction: 'normal'
     });
 
+    circles.animate([{ offset: 0 }, { offset: 1, rotate: '360deg' }], {
+      duration: 60000,
+      iterations: Infinity,
+      direction: 'reverse'
+    });
+
+    innerCircles.animate([{ offset: 0 }, { offset: 1, rotate: '360deg' }], {
+      duration: 30000,
+      iterations: Infinity,
+      direction: 'normal'
+    });
+
+    outerCircles.animate(
+      [
+        { offset: 0, scale: 1 },
+        { offset: 1, scale: 1.25 }
+      ],
+      {
+        duration: 20000,
+        iterations: Infinity,
+        direction: 'alternate',
+        easing: 'ease-in-out'
+      }
+    );
+
+    circles.animate(
+      [
+        { offset: 0, scale: 1 },
+        { offset: 1, scale: 1.25 }
+      ],
+      {
+        duration: 10000,
+        iterations: Infinity,
+        direction: 'alternate',
+        easing: 'ease-in-out'
+      }
+    );
+
+    innerCircles.animate(
+      [
+        { offset: 0, scale: 1 },
+        { offset: 1, scale: 1.25 }
+      ],
+      {
+        duration: 5000,
+        iterations: Infinity,
+        direction: 'alternate',
+        easing: 'ease-in-out'
+      }
+    );
+
     // Individual Circles
+    [...outerCircles.children].forEach((circle, index) => {
+      circle.animate(
+        [
+          { offset: 0, transform: 'translate(-50%, -50%) scale(0.0001)' },
+          {
+            offset: 1,
+            transform: `translate(-50%, -50%) scale(2.5) rotateZ(${
+              (index + 1) * (90 / colors.length)
+            }deg)`
+          }
+        ],
+        {
+          delay: 800 + index * 50,
+          duration: 4000,
+          iterations: 1,
+          direction: 'alternate',
+          easing: 'cubic-bezier(0.75,0,0,1)',
+          fill: 'both'
+        }
+      );
+    });
+
     [...circles.children].forEach((circle, index) => {
       circle.animate(
         [
@@ -48,7 +122,7 @@
           }
         ],
         {
-          delay: 800,
+          delay: 800 + index * 50,
           duration: 4000,
           iterations: 1,
           direction: 'alternate',
@@ -56,12 +130,6 @@
           fill: 'both'
         }
       );
-    });
-
-    innerCircles.animate([{ offset: 0 }, { offset: 1, rotate: '360deg' }], {
-      duration: 120000,
-      iterations: Infinity,
-      direction: 'reverse'
     });
 
     [...innerCircles.children].forEach((circle, index) => {
@@ -76,7 +144,7 @@
           }
         ],
         {
-          delay: 500,
+          delay: 500 + index * 10,
           duration: 4000,
           iterations: 1,
           direction: 'alternate',
@@ -88,13 +156,19 @@
   });
 </script>
 
+<div bind:this={innerCircles} class="absolute opacity-0">
+  {#each colors as color}
+    <span class="w-64 h-64 {color} border block absolute" />
+  {/each}
+</div>
+
 <div bind:this={circles} class="absolute opacity-0">
   {#each colors as color}
     <span class="w-64 h-64 {color} border block absolute" />
   {/each}
 </div>
 
-<div bind:this={innerCircles} class="absolute opacity-0">
+<div bind:this={outerCircles} class="absolute opacity-0">
   {#each colors as color}
     <span class="w-64 h-64 {color} border block absolute" />
   {/each}
