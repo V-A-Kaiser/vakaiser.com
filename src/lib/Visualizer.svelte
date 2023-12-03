@@ -51,9 +51,10 @@
     outerCircles.animate(
       [
         { offset: 0, scale: 1 },
-        { offset: 1, scale: 1.25 }
+        { offset: 1, scale: 2 }
       ],
       {
+        delay: 2000,
         duration: 20000,
         iterations: Infinity,
         direction: 'alternate',
@@ -64,10 +65,11 @@
     circles.animate(
       [
         { offset: 0, scale: 1 },
-        { offset: 1, scale: 1.25 }
+        { offset: 1, scale: 2 }
       ],
       {
-        duration: 10000,
+        delay: 2000,
+        duration: 15000,
         iterations: Infinity,
         direction: 'alternate',
         easing: 'ease-in-out'
@@ -77,10 +79,11 @@
     innerCircles.animate(
       [
         { offset: 0, scale: 1 },
-        { offset: 1, scale: 1.25 }
+        { offset: 1, scale: 2 }
       ],
       {
-        duration: 5000,
+        delay: 2000,
+        duration: 10000,
         iterations: Infinity,
         direction: 'alternate',
         easing: 'ease-in-out'
@@ -94,13 +97,13 @@
           { offset: 0, transform: 'translate(-50%, -50%) scale(0.0001)' },
           {
             offset: 1,
-            transform: `translate(-50%, -50%) scale(2.5) rotateZ(${
+            transform: `translate(-50%, -50%) scale(3) rotateZ(${
               (index + 1) * (90 / colors.length)
             }deg)`
           }
         ],
         {
-          delay: 500 + index * 10,
+          delay: 1000 + index * 15,
           duration: 4000,
           iterations: 1,
           direction: 'alternate',
@@ -116,13 +119,13 @@
           { offset: 0, transform: 'translate(-50%, -50%) scale(0.0001)' },
           {
             offset: 1,
-            transform: `translate(-50%, -50%) scale(1.75) rotateZ(${
+            transform: `translate(-50%, -50%) scale(2) rotateZ(${
               (index + 1) * (90 / colors.length)
             }deg)`
           }
         ],
         {
-          delay: 500 + index * 20,
+          delay: 750 + index * 15,
           duration: 4000,
           iterations: 1,
           direction: 'alternate',
@@ -138,13 +141,13 @@
           { offset: 0, transform: 'translate(-50%, -50%) scale(0.0001)' },
           {
             offset: 1,
-            transform: `translate(-50%, -50%) scale(1.225) rotateZ(-${
+            transform: `translate(-50%, -50%) scale(1.25) rotateZ(-${
               (index + 1) * (90 / colors.length)
             }deg)`
           }
         ],
         {
-          delay: 500 + index * 30,
+          delay: 500 + index * 15,
           duration: 4000,
           iterations: 1,
           direction: 'alternate',
@@ -158,18 +161,18 @@
 
 <div bind:this={innerCircles} class="absolute opacity-0">
   {#each colors as color}
-    <span class="w-64 h-64 {color} border border-dashed block absolute" />
+    <span class="w-32 h-32 {color} border-[0.5px] border-dashed block absolute" />
   {/each}
 </div>
 
 <div bind:this={circles} class="absolute opacity-0">
   {#each colors as color}
-    <span class="w-64 h-64 {color} border block absolute" />
+    <span class="w-32 h-32 {color} border-[0.5px] block absolute" />
   {/each}
 </div>
 
 <div bind:this={outerCircles} class="absolute opacity-0">
   {#each colors as color}
-    <span class="w-64 h-64 {color} border border-dotted block absolute" />
+    <span class="w-32 h-32 {color} border-[0.5px] border-dotted block absolute" />
   {/each}
 </div>
