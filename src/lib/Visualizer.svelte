@@ -24,6 +24,10 @@
   ];
 
   onMount(() => {
+    // Reset opacity onMount to prevent flicker.
+    circles.style.setProperty('opacity', '1');
+    innerCircles.style.setProperty('opacity', '1');
+
     // Circle Group
     circles.animate([{ offset: 0 }, { offset: 1, rotate: '360deg' }], {
       duration: 60000,
@@ -84,13 +88,13 @@
   });
 </script>
 
-<div bind:this={circles} class="absolute">
+<div bind:this={circles} class="absolute opacity-0">
   {#each colors as color}
     <span class="w-64 h-64 {color} border block absolute" />
   {/each}
 </div>
 
-<div bind:this={innerCircles} class="absolute">
+<div bind:this={innerCircles} class="absolute opacity-0">
   {#each colors as color}
     <span class="w-64 h-64 {color} border block absolute" />
   {/each}

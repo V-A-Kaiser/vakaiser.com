@@ -5,6 +5,10 @@
   let firstName: HTMLDivElement, lastName: HTMLDivElement;
 
   onMount(async () => {
+    // Reset opacity onMount to prevent flash of unstyled text.
+    firstName.style.setProperty('opacity', '1');
+    lastName.style.setProperty('opacity', '1');
+
     // Flicker Animation
     let flickerAnimationKeyframes = [
       { opacity: 0 },
@@ -71,12 +75,12 @@
   <h1
     class="text-5xl tracking-[.5rem] font-thin font-title select-none flex justify-between items-stretch"
   >
-    <div bind:this={firstName} class="p-2 pl-4 rounded-l-lg">
+    <div bind:this={firstName} class="p-2 pl-4 rounded-l-lg opacity-0">
       {#each 'VALERIE' as letter}
         <span>{letter}</span>
       {/each}
     </div>
-    <div bind:this={lastName} class="p-2 rounded-r-lg">
+    <div bind:this={lastName} class="p-2 rounded-r-lg opacity-0">
       {#each 'KAISER' as letter}
         <span>{letter}</span>
       {/each}
