@@ -8,4 +8,5 @@
   class="flex flex-col items-center justify-center h-screen overflow-hidden bg-black text-white"
 >
   <Name />
+  <Visualizer />
 </main>
