@@ -31,19 +31,19 @@
 
     // Circle Groups
     outerCircles.animate([{ offset: 0 }, { offset: 1, rotate: '360deg' }], {
-      duration: 120000,
+      duration: 100000,
       iterations: Infinity,
       direction: 'normal'
     });
 
     circles.animate([{ offset: 0 }, { offset: 1, rotate: '360deg' }], {
-      duration: 60000,
+      duration: 80000,
       iterations: Infinity,
       direction: 'reverse'
     });
 
     innerCircles.animate([{ offset: 0 }, { offset: 1, rotate: '360deg' }], {
-      duration: 30000,
+      duration: 60000,
       iterations: Infinity,
       direction: 'normal'
     });
@@ -100,7 +100,7 @@
           }
         ],
         {
-          delay: 800 + index * 50,
+          delay: 500 + index * 10,
           duration: 4000,
           iterations: 1,
           direction: 'alternate',
@@ -122,7 +122,7 @@
           }
         ],
         {
-          delay: 800 + index * 50,
+          delay: 500 + index * 20,
           duration: 4000,
           iterations: 1,
           direction: 'alternate',
@@ -144,7 +144,7 @@
           }
         ],
         {
-          delay: 500 + index * 10,
+          delay: 500 + index * 30,
           duration: 4000,
           iterations: 1,
           direction: 'alternate',
@@ -158,7 +158,7 @@
 
 <div bind:this={innerCircles} class="absolute opacity-0">
   {#each colors as color}
-    <span class="w-64 h-64 {color} border block absolute" />
+    <span class="w-64 h-64 {color} border border-dashed block absolute" />
   {/each}
 </div>
 
@@ -170,6 +170,6 @@
 
 <div bind:this={outerCircles} class="absolute opacity-0">
   {#each colors as color}
-    <span class="w-64 h-64 {color} border block absolute" />
+    <span class="w-64 h-64 {color} border border-dotted block absolute" />
   {/each}
 </div>
