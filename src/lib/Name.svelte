@@ -43,15 +43,17 @@
     firstName.animate(
       [
         { offset: 0, transform: 'translateX(-3rem)' },
-        { offset: 1, transform: 'translateX(0rem) skewX(-15deg)' }
+        { offset: 0.75, backgroundColor: 'transparent' },
+        { offset: 0.75, backgroundColor: 'black' },
+        { offset: 1, transform: 'translateX(0rem) skewX(-15deg)', backgroundColor: 'black' }
       ],
       snsOptions
     );
     lastName.animate(
       [
         { offset: 0, transform: 'translateX(3rem)' },
-        { offset: 0.7, color: 'white', backgroundColor: 'transparent' },
-        { offset: 0.7, color: 'black', backgroundColor: 'white' },
+        { offset: 0.75, color: 'white', backgroundColor: 'transparent' },
+        { offset: 0.75, color: 'black', backgroundColor: 'white' },
         {
           offset: 1,
           transform: 'translateX(0) skewX(-15deg)',

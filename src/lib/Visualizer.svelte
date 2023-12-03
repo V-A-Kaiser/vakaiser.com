@@ -23,28 +23,28 @@
   ];
 
   onMount(() => {
-    let animationSettings: KeyframeAnimationOptions = {
-      delay: 500,
-      duration: 4000,
+    // Circle Group
+    circles.animate([{ offset: 0 }, { offset: 1, rotate: '360deg' }], {
+      duration: 60000,
       iterations: Infinity,
       direction: 'normal',
-      easing: 'ease-in-out'
-    };
-
-    // Circle Group
-    // circles.animate([{ offset: 0 }, { offset: 1, rotate: '360deg' }], animationSettings);
+    });
 
     // Individual Circles
     [...circles.children].forEach((circle, index) => {
       circle.animate(
         [
-          { offset: 0, transform: 'translate(-50%, -50%) scale(0.15)' },
-          { offset: 1, transform: `translate(-50%, -50%) rotateZ(${(index + 1) * (90/ colors.length)}deg)` }
+          { offset: 0, transform: 'translate(-50%, -50%) scale(0.0001)' },
+          {
+            offset: 1,
+            transform: `translate(-50%, -50%) scale(1.5) rotateZ(${
+              (index + 1) * (90 / colors.length)
+            }deg)`
+          }
         ],
         {
-          delay: 500,
-          duration:4000,
-          iterations: Infinity,
+          duration: 4000,
+          iterations: 1,
           direction: 'alternate',
           easing: 'cubic-bezier(.8,0,.2,1)',
           fill: 'both'
@@ -56,6 +56,6 @@
 
 <div bind:this={circles} class="absolute">
   {#each colors as color}
-    <span class="w-64 h-64 {color} opacity-75 block absolute" />
+    <span class="w-64 h-64 {color} border opacity-90 block absolute" />
   {/each}
 </div>
