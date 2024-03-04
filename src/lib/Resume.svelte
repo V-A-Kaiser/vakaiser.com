@@ -20,14 +20,21 @@
   ];
 </script>
 
-<div class="text-slate-900 bg-slate-100 h-[11in] w-[8.5in] z-10 flex flex-col justify-between">
+<div class="text-slate-900 bg-slate-100 h-[11in] w-[8.5in] z-10 flex flex-col">
   <!-- Title and Contact Information -->
-  <div class="text-center p-4 bg-slate-900 text-slate-100 text-4xl font-thin font-title">
-    VALERIE KAISER
+  <div class="text-center p-4 bg-slate-900 text-slate-100 font-title">
+    <div class="text-4xl font-thin">VALERIE KAISER</div>
+    <div class="flex justify-center gap-4 text-sm mt-2">
+      <div>206 - 650 - 5259</div>
+      <div>✦</div>
+      <div>resume@vakaiser.com</div>
+      <div>✦</div>
+      <div>linkedin.com/in/vakaiser</div>
+    </div>
   </div>
 
   <!-- Experience -->
-  <div class="p-8 pb-0 mt-auto">
+  <div class="p-8 pb-0">
     <h1 class="font-bold border-b border-black">EXPERIENCE</h1>
 
     <!-- Cart.com -->
@@ -45,7 +52,7 @@
       <ul class="list-disc ms-8 mb-4">
         <li>
           Designed and implemented an IaC solution for managing the shared dependencies of 15+ (and
-          growing) Kubernetes clusters via Helm, Terraform, and GitHub Actions.
+          growing) Kubernetes clusters in GCP and AWS via Helm, Terraform, and GitHub Actions.
         </li>
         <li>
           Refactored the deployment process for microservices across the organization via
@@ -110,7 +117,7 @@
   </div>
 
   <!-- Education -->
-  <div class="p-8 pb-0 mt-auto">
+  <div class="p-8 pb-0">
     <h1 class="font-bold border-b border-black">EDUCATION</h1>
     <div class="flex justify-between">
       <p>Lamar University</p>
