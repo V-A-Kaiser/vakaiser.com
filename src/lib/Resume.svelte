@@ -35,7 +35,7 @@
 
   <!-- Experience -->
   <div class="px-8 mt-4">
-    <h1 class="text-lg border-b border-black font-title font-bold">EXPERIENCE</h1>
+    <h1 class="text-lg border-b border-black font-title font-bold mb-2">EXPERIENCE</h1>
 
     <!-- Cart.com -->
     <div class="mb-4">
@@ -118,7 +118,7 @@
 
   <!-- Education -->
   <div class="px-8 mt-4">
-    <h1 class="text-lg border-b border-black font-title font-bold">EDUCATION</h1>
+    <h1 class="text-lg border-b border-black font-title font-bold mb-2">EDUCATION</h1>
     <div class="flex justify-between">
       <p>Lamar University</p>
       <p>Beaumont, TX</p>
@@ -135,7 +135,7 @@
 
   <!-- Skills -->
   <div class="px-8 mt-4">
-    <h1 class="text-lg border-b border-black font-title font-bold">TECHNOLOGIES</h1>
+    <h1 class="text-lg border-b border-black font-title font-bold mb-2">TECHNOLOGIES</h1>
     <div class="flex gap-x-2 flex-wrap justify-center">
       {#each tech as tech}
         <span>
