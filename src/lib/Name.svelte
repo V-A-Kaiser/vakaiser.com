@@ -71,7 +71,7 @@
   });
 </script>
 
-<div class="flex items-center justify-center bg-black w-32 z-10">
+<div class="flex items-center justify-center z-10">
   <h1
     class="text-xl sm:text-5xl tracking-[.5rem] font-thin font-title select-none flex justify-between items-stretch"
   >
