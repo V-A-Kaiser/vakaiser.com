@@ -1,25 +1,3 @@
-<script lang="ts">
-  let tech = [
-    'Typescript',
-    'BASH',
-    'HTML',
-    'CSS',
-    'JSON',
-    'YAML',
-    'React',
-    'Svelte',
-    'AWS',
-    'GCP',
-    'Kubernetes',
-    'Terraform',
-    'GitHub Actions',
-    'Helm',
-    'Docker',
-    'NodeJS',
-    'Git'
-  ];
-</script>
-
 <div class="text-slate-900 bg-slate-100 h-[11in] w-[8.5in] z-10 flex flex-col">
   <!-- Title and Contact Information -->
   <div class="text-center p-4 bg-slate-900 text-slate-100 font-title">
@@ -59,10 +37,6 @@
           centralized Helm charts, abstracted GitHub Action workflows, and Terraform.
         </li>
         <li>
-          Established CI/CD pipelines and a robust deployment process for the Brand Console via
-          Docker, Kubernetes, Helm and GitHub Actions.
-        </li>
-        <li>
           Served as an evangelist for Cart's CloudOps practice through cross team collaboration and
           problem solving.
         </li>
@@ -82,11 +56,15 @@
           Built the first 3 iterations of the Cart.com Brand Console front-end using React.js,
           Typescript, and GraphQL.
         </li>
+        <li>
+          Established CI/CD pipelines and a robust deployment process for the Brand Console via
+          Docker, Kubernetes, Helm and GitHub Actions.
+        </li>
       </ul>
     </div>
 
     <!-- AGS -->
-    <div>
+    <div class="mb-4">
       <div class="font-bold flex justify-between">
         <p>AGS, LLC</p>
         <p>January 2018 &mdash; February 2021</p>
@@ -114,10 +92,30 @@
         <div>Lightning Wheel</div>
       </div>
     </div>
+
+    <!-- NASA Subcontract -->
+    <div>
+      <div class="font-bold flex justify-between">
+        <p>NASA</p>
+        <p>May 2017 &mdash; January 2018</p>
+      </div>
+
+      <div class="italic">
+        <p>Software Engineer (Contract)</p>
+      </div>
+
+      <ul class="list-disc ms-8">
+        <li>
+          Small miscellaneous open source contributions to NASA's Trick Simulation Environment.
+          <br />
+          (https://github.com/nasa/trick)
+        </li>
+      </ul>
+    </div>
   </div>
 
   <!-- Education -->
-  <div class="px-8 mt-4">
+  <div class="px-8 my-auto">
     <h1 class="text-lg border-b border-black font-title font-bold mb-2">EDUCATION</h1>
     <div class="flex justify-between">
       <p>Lamar University</p>
@@ -134,10 +132,10 @@
   </div>
 
   <!-- Skills -->
-  <div class="px-8 mt-4">
+  <div class="px-8 mb-4">
     <h1 class="text-lg border-b border-black font-title font-bold mb-2">TECHNOLOGIES</h1>
     <div class="flex gap-x-2 flex-wrap justify-center">
-      {#each tech as tech}
+      {#each ['Typescript', 'BASH', 'HTML', 'CSS', 'JSON', 'YAML', 'React', 'Svelte', 'AWS', 'GCP', 'Kubernetes', 'Terraform', 'GitHub Actions', 'Helm', 'Docker', 'NodeJS', 'Git'] as tech}
         <span>
           {tech}
         </span>
