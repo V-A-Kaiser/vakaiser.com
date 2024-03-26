@@ -1,6 +1,6 @@
-<div class="text-slate-900 bg-slate-100 h-[11in] w-[8.5in] z-10 flex flex-col">
+<div class="text-slate-800 bg-slate-100 h-[11in] w-[8.5in] z-10 flex flex-col">
   <!-- Title and Contact Information -->
-  <div class="text-center p-4 bg-slate-900 text-slate-100 font-title">
+  <div class="text-center p-4 bg-gradient-to-b from-indigo-950 to-gray-900 text-slate-100 font-title">
     <div class="text-4xl font-thin">VALERIE KAISER</div>
     <div class="flex justify-center gap-4 text-sm mt-2">
       <div>206 - 650 - 5259</div>
@@ -27,7 +27,7 @@
         <p>January 2022 &mdash; Present</p>
       </div>
 
-      <ul class="list-disc ms-8 mb-4">
+      <ul class="list-disc ms-8 mb-2">
         <li>
           Designed and implemented an IaC solution for managing the shared dependencies of 15+ (and
           growing) Kubernetes clusters in GCP and AWS via Helm, Terraform, and GitHub Actions.
@@ -43,7 +43,7 @@
         <li>
           Migrated repositories, pipelines, and teams over to GitHub from GitLab and BitBucket.
         </li>
-        <li>Integrated pipeline status announcements with the company Slack.</li>
+        <li>Created a Slack bot to announce pipeline updates.</li>
       </ul>
 
       <div class="italic flex justify-between">
@@ -132,7 +132,7 @@
   </div>
 
   <!-- Skills -->
-  <div class="px-8 mb-4">
+  <div class="px-8 mb-8">
     <h1 class="text-lg border-b border-black font-title font-bold mb-2">TECHNOLOGIES</h1>
     <div class="flex gap-x-2 flex-wrap justify-center">
       {#each ['Typescript', 'BASH', 'HTML', 'CSS', 'JSON', 'YAML', 'React', 'Svelte', 'AWS', 'GCP', 'Kubernetes', 'Terraform', 'GitHub Actions', 'Helm', 'Docker', 'NodeJS', 'Git'] as tech}
