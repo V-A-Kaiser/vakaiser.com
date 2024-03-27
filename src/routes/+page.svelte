@@ -1,7 +1,6 @@
 <script lang="ts">
   // Components
   import Name from '$lib/Name.svelte';
-  import Resume from '$lib/Resume.svelte';
   import Visualizer from '$lib/Visualizer.svelte';
 </script>
 
@@ -14,5 +13,4 @@
 >
   <Visualizer />
   <Name />
-  <!-- <Resume /> -->
 </main>

@@ -1,4 +1,4 @@
-<div class="text-slate-800 bg-slate-100 h-[11in] w-[8.5in] z-10 flex flex-col">
+<div class="text-slate-800 bg-white h-[11in] w-[8.5in] z-10 flex flex-col shadow-lg">
   <!-- Title and Contact Information -->
   <div class="text-center p-4 bg-gradient-to-b from-indigo-950 to-gray-900 text-slate-100 font-title">
     <div class="text-4xl font-thin">VALERIE KAISER</div>
