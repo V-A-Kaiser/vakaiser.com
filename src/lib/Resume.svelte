@@ -75,7 +75,7 @@
       </div>
 
       <ul class="list-disc ms-8">
-        <li>Addressed a litany of DevOps issues involving proprietary tool chains and hardware.</li>
+        <li>Addressed a litany of DevOps issues involving SVN, custom tool chains, and proprietary hardware.</li>
         <li>Sole software engineer for the 10 video slot games below:</li>
       </ul>
 
@@ -135,7 +135,7 @@
   <div class="px-8 mb-8">
     <h1 class="text-lg border-b border-black font-title font-bold mb-2">TECHNOLOGIES</h1>
     <div class="flex gap-x-2 flex-wrap justify-center">
-      {#each ['Typescript', 'BASH', 'HTML', 'CSS', 'JSON', 'YAML', 'React', 'Svelte', 'AWS', 'GCP', 'Kubernetes', 'Terraform', 'GitHub Actions', 'Helm', 'Docker', 'NodeJS', 'Git'] as tech}
+      {#each ['Typescript', 'Python', 'BASH', 'HTML', 'CSS', 'JSON', 'YAML', 'React', 'Svelte', 'AWS', 'GCP', 'Kubernetes', 'Terraform', 'GitHub Actions', 'Helm', 'Docker', 'NodeJS', 'Git', 'Subversion (SVN)'] as tech}
         <span>
           {tech}
         </span>
