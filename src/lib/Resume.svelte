@@ -39,12 +39,12 @@
             via centralized Helm charts, reusable GitHub Action workflows, and Terraform.
           </li>
           <li>
-            Worked with numerous teams across various time zones to solve issues with networking,
-            code deployment, environment management, cloud infrastructure, and Kubernetes.
+            Worked alongside development teams to address a variety of issues with networking, code
+            deployment, environment management, cloud infrastructure, and Kubernetes.
           </li>
           <li>
-            Worked alongside the SecOps team to implement security tooling and address leaks and
-            security breaches.
+            Worked alongside the SecOps team to address token leaks in source code and implement
+            security tooling in clusters.
           </li>
           <li>
             Served as an evangelist for the CloudOps team and led weekly "Lunch and Learn" knowledge
